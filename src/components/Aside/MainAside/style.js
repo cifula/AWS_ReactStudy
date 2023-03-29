@@ -11,10 +11,6 @@ export const menuAside = css`
     box-shadow: 1px 0px 5px 1px black;
     background-color: #454545;
     transition: left 1s ease;
-
-    &:hidden-menu {
-        left: -300px;
-    }
 `;
 
 export const asideHeader = css`
@@ -91,6 +87,7 @@ export const menuItems = css`
 
     font-size: 16px;
     color: white;
+    text-decoration: none;
 
     &:hover {
         background-color: #121212;
@@ -101,4 +98,18 @@ export const lLabel = css`
     padding: 0 10px;
     font-size: 16px;
     color: white; 
+`;
+
+export const hiddenMenu = css`
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+
+    width: 300px;
+    height: 100%;
+    box-shadow: 1px 0px 5px 1px black;
+    background-color: #454545;
+    transition: left 1s ease;
+    left: -300px;
 `;

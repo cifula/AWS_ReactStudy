@@ -6,6 +6,8 @@ import MainAside from './components/Aside/MainAside/MainAside';
 import { Global } from "@emotion/react";
 import { reset } from './style/Global/reset';
 import Todo from "./pages/Todo/Todo"
+import { Route, Routes } from "react-router-dom";
+import UserInformation from "./pages/UserInformation/UserInformation";
 
 const container = css`
     position: relative;
@@ -22,6 +24,11 @@ function App() {
     <div css={container}>
       <Global style={reset} />
       <MainAside />
+      <Routes>
+        <Route path='/' Component={UserInformation} />
+        <Route path='/userinformation' Component={UserInformation}/>
+        <Route path='/todo' Component={Todo}/>
+      </Routes>
     </div>
     
   );
